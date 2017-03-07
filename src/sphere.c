@@ -5,11 +5,10 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Mon Feb 20 12:28:30 2017 Gaumont Thomas
-** Last update Tue Mar  7 13:19:56 2017 Gaumont Thomas
+** Last update Tue Mar  7 14:10:12 2017 Gaumont Thomas
 */
 
-#include	<SFML/Graphics.h>
-#include	<math.h>
+#include	"raytracer1.h"
 
 float		intersect_sphere(sfVector3f eye_pos, sfVector3f dir_vector,
 				 float radius)
@@ -46,4 +45,9 @@ float		intersect_sphere(sfVector3f eye_pos, sfVector3f dir_vector,
 	return (k1)
     }
   return (-1);
+}
+
+sfVector3f	get_normal_sphere(sfVector3f intersection_point)
+{
+  return (intersection_point);
 }

@@ -5,16 +5,17 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Mon Feb 20 12:22:03 2017 Gaumont Thomas
-** Last update Tue Mar  7 11:25:03 2017 Gaumont Thomas
+** Last update Tue Mar  7 14:11:17 2017 Gaumont Thomas
 */
 
-#include	<SFML/Graphics.h>
+#include	"raytracer1.h"
 
-sfVector3f	calc_dir_vector(sfVector2i screen_size, sfVector2i screen_pos)
+sfVector3f	calc_dir_vector(float dist_to_plane,
+				sfVector2i screen_size, sfVector2i screen_pos)
 {
   sfVector3f	dir;
 
-  dir.x = 500;
+  dir.x = dist_to_plane;
   dir.y = (screen_size.x / 2) - screen_pos.x;
   dir.z = (screen_size.y / 2) - screen_pos.y;
   return (dir);

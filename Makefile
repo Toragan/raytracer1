@@ -5,14 +5,16 @@
 ## Login   <gaumon_t@epitech.net>
 ## 
 ## Started on  Thu Dec 15 09:22:25 2016 Gaumont Thomas
-## Last update Tue Mar  7 13:20:40 2017 Gaumont Thomas
+## Last update Tue Mar  7 14:16:04 2017 Gaumont Thomas
 ##
 
 NAME	=	raytracer1
 
 SRCS	=	raytracer1.c		\
 		src/calc_dir_vector.c	\
-		src/intersect_sphere.c
+		src/translate.c		\
+		src/sphere.c		\
+		src/plane.c
 
 OBJS	=	$(SRCS:.c=.o)
 

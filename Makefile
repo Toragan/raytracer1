@@ -5,7 +5,7 @@
 ## Login   <gaumon_t@epitech.net>
 ## 
 ## Started on  Thu Dec 15 09:22:25 2016 Gaumont Thomas
-## Last update Tue Mar  7 21:11:44 2017 Gaumont Thomas
+## Last update Wed Mar  8 09:07:38 2017 Gaumont Thomas
 ##
 
 NAME	=	raytracer1
@@ -28,7 +28,7 @@ all	:	$(NAME)
 debug	:	CFLAGS += -ggdb3
 debug	:	fclean all
 
-flags	:	CFLAGS += -W -Wall -Wextra
+flags	:	CFLAGS += -W -Wall -Wextra -Werror
 flags	:	fclean all
 
 $(NAME)	:	$(OBJS)

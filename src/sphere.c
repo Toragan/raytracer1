@@ -5,7 +5,7 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Mon Feb 20 12:28:30 2017 Gaumont Thomas
-** Last update Wed Mar  8 09:12:29 2017 Gaumont Thomas
+** Last update Wed Mar  8 09:49:59 2017 Gaumont Thomas
 */
 
 #include	"raytracer1.h"
@@ -18,7 +18,8 @@ float		delta(float a, float b, float k)
   if (k == 0)
     {
       k1 = (- b) / (2 * a);
-      return (k1);
+      if (k1 >= 0)
+	return (k1);
     }
   else if (k > 0)
     {
@@ -26,7 +27,11 @@ float		delta(float a, float b, float k)
       k2 = ((- b) - sqrt(k)) / (2 * a);
       if (k1 < 0 && k2 < 0)
 	return (-1);
-      else if (k1 > k2)
+      if (k1 < 0)
+	return (k2);
+      if (k2 < 0)
+	return (k1);
+      if (k1 > k2)
 	return (k2);
       else
 	return (k1);

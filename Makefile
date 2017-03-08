@@ -5,7 +5,7 @@
 ## Login   <gaumon_t@epitech.net>
 ## 
 ## Started on  Thu Dec 15 09:22:25 2016 Gaumont Thomas
-## Last update Wed Mar  8 10:58:23 2017 Gaumont Thomas
+## Last update Wed Mar  8 20:52:09 2017 Gaumont Thomas
 ##
 
 NAME	=	raytracer1
@@ -16,6 +16,7 @@ SRCS	=	raytracer1.c		\
 		src/rotate.c		\
 		src/sphere.c		\
 		src/cone.c		\
+		src/cylinder.c		\
 		src/plane.c
 
 OBJS	=	$(SRCS:.c=.o)

@@ -5,15 +5,15 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Tue Mar  7 14:21:24 2017 Gaumont Thomas
-** Last update Wed Mar  8 10:59:30 2017 Gaumont Thomas
+** Last update Wed Mar  8 20:53:43 2017 Gaumont Thomas
 */
 
 #include	"raytracer1.h"
 
-float		delt(float a, float b, float k)
+float		delta_cone(float a, float b, float k)
 {
-  float         k1;
-  float         k2;
+  float		k1;
+  float		k2;
 
   if (k == 0)
     {
@@ -52,12 +52,10 @@ float		intersect_cone(sfVector3f eye_pos, sfVector3f dir_vector,
   tang = pow(tan(semiangle), 2);
   a = pow(dir_vector.x, 2) + pow(dir_vector.y, 2) -
     (pow(dir_vector.z, 2) * tang);
-
   b = 2 * ((eye_pos.x * dir_vector.x) + (dir_vector.y * eye_pos.y) -
 	   ((dir_vector.z * eye_pos.z) * tang));
-
   c = pow(eye_pos.x, 2) + pow(eye_pos.y, 2) - (pow(eye_pos.z, 2) * tang);
   delta = pow(b, 2) - (4 * a * c);
-  delta = delt(a, b, delta);
+  delta = delta_cone(a, b, delta);
   return (delta);
 }

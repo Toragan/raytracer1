@@ -5,7 +5,7 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Tue Mar  7 13:24:28 2017 Gaumont Thomas
-** Last update Fri Mar 17 09:41:23 2017 Gaumont Thomas
+** Last update Fri Mar 17 09:57:42 2017 Gaumont Thomas
 */
 
 #include	"raytracer1.h"
@@ -24,8 +24,11 @@ sfVector3f	get_normal_plane(int upward)
 {
   sfVector3f	coord;
 
-  coord.x = upward;
-  coord.y = upward;
-  coord.z = upward;
+  coord.x = 0;
+  coord.y = 0;
+  if (upward == 1)
+    coord.z = 1;
+  else if (upward == 0)
+    coord.z = - 1;
   return (coord);
 }

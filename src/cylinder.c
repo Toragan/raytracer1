@@ -5,7 +5,7 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Tue Mar  7 13:31:07 2017 Gaumont Thomas
-** Last update Wed Mar  8 20:45:40 2017 Gaumont Thomas
+** Last update Fri Mar 17 09:42:07 2017 Gaumont Thomas
 */
 
 #include	"raytracer1.h"
@@ -53,4 +53,14 @@ float		intersect_cylinder(sfVector3f eye_pos,
   delta = pow(b, 2) - (4 * a * c);
   delta = delt(a, b, delta);
   return (delta);
+}
+
+sfVector3f	get_normal_cylinder(sfVector3f intersection_point)
+{
+  sfVector3f	coord;
+
+  coord.x = intersection_point.x;
+  coord.y = 0;
+  coord.z = intersection_point.z;
+  return (coord);
 }

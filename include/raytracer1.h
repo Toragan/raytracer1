@@ -5,7 +5,7 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Tue Mar  7 14:02:48 2017 Gaumont Thomas
-** Last update Wed Mar  8 20:14:22 2017 Gaumont Thomas
+** Last update Fri Mar 17 09:43:19 2017 Gaumont Thomas
 */
 
 #include	<SFML/Graphics.h>
@@ -27,5 +27,8 @@ float		intersect_cylinder(sfVector3f eye_pos, sfVector3f dir_vector,
 float		intersect_cone(sfVector3f eye_pos, sfVector3f dir_vector,
 			       float semiangle);
 sfVector3f	get_normal_sphere(sfVector3f intersection_point);
+sfVector3f	get_normal_plane(int upward);
+sfVector3f	get_normal_cylinder(sfVector3f intersection_point);
+sfVector3f	get_normal_cone(sfVector3f intersection_point, float semiangle);
 
 #endif /* !RAYTRACER1_H_ */

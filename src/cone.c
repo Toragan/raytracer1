@@ -5,7 +5,7 @@
 ** Login   <gaumon_t@epitech.net>
 **
 ** Started on  Tue Mar  7 14:21:24 2017 Gaumont Thomas
-** Last update Fri Mar 17 09:58:30 2017 Gaumont Thomas
+** Last update Fri Mar 17 10:02:02 2017 Gaumont Thomas
 */
 
 #include	"raytracer1.h"
@@ -65,8 +65,8 @@ sfVector3f	get_normal_cone(sfVector3f intersection_point, float semiangle)
   sfVector3f	coord;
 
   semiangle = (semiangle * M_PI) / 180;
-  coord.x = intersection_point.x / semiangle;
-  coord.y = intersection_point.y / semiangle;
-  coord.z = intersection_point.z / semiangle;
+  coord.x = intersection_point.x * semiangle
+  coord.y = intersection_point.y;
+  coord.z = 0
   return (coord);
 }
